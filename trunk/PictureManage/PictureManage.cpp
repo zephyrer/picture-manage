@@ -22,7 +22,8 @@ BEGIN_MESSAGE_MAP(CPictureManageApp, CWinApp)
 	ON_COMMAND(ID_APP_ABOUT, &CPictureManageApp::OnAppAbout)
 	// 基于文件的标准文档命令
 	ON_COMMAND(ID_FILE_NEW, &CWinApp::OnFileNew)
-	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
+	ON_COMMAND(ID_FILE_IMPORT, &CPictureManageApp::OnFileOpen)
+
 	// 标准打印设置命令
 	ON_COMMAND(ID_FILE_PRINT_SETUP, &CWinApp::OnFilePrintSetup)
 END_MESSAGE_MAP()
@@ -114,6 +115,10 @@ BOOL CPictureManageApp::InitInstance()
 	return TRUE;
 }
 
+void CPictureManageApp::OnFileOpen()
+{
+
+}
 
 
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框

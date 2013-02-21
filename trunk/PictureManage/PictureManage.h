@@ -23,6 +23,7 @@ public:
 // ÷ÿ–¥
 public:
 	virtual BOOL InitInstance();
+	virtual void OnFileOpen();
 
 //  µœ÷
 	afx_msg void OnAppAbout();
