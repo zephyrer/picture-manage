@@ -59,3 +59,9 @@
 
 
 static _bstr_t g_bstrConnect = "Provider=SQLOLEDB; Server=PC-201004231533;Database=temp;uid=password;pwd=P@ssw0rd;";
+
+#include <iostream>
+#include <string>
+#include <list>
+using namespace std;
+

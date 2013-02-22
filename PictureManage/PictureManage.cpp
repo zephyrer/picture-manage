@@ -115,12 +115,15 @@ BOOL CPictureManageApp::InitInstance()
 
 	m_patient.m_pid=atoi(__argv[1]);
 	m_doctor.m_pid=atoi(__argv[2]);
+	m_patient.RefreshFromDatabase();
+	m_doctor.RefreshFromDatabase();
 
-	if (!ProcessShellCommand(cmdInfo))
-		return FALSE;
+	/*if (!ProcessShellCommand(cmdInfo))
+		return FALSE;*/
 	// 主窗口已初始化，因此显示它并对其进行更新
 	pMainFrame->ShowWindow(m_nCmdShow);
 	pMainFrame->UpdateWindow();
+
 
 	return TRUE;
 }
