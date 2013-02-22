@@ -110,7 +110,6 @@ BOOL CPictureManageApp::InitInstance()
 	//命令行启动程序的命令如下，第一个参数123表示病人id，第二个参数456表示主治医师id；
 	//PictureManage.exe 123 456
 
-	AfxMessageBox("ddd");
 	if (__argc<3)
 		return FALSE;
 
