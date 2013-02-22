@@ -3,9 +3,12 @@
 
 class ADOConn
 {
-public:
+private: 
 	ADOConn(void);
-	~ADOConn(void);
+	static ADOConn* m_pConn;
+public:
+	static ADOConn* GetInstance();
+
 
 public:
 	// 初始化—连接数据库

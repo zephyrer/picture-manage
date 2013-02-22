@@ -1,13 +1,22 @@
 #include "StdAfx.h"
 #include "ADOConn.h"
 
+ADOConn* ADOConn::m_pConn=NULL;
+
 ADOConn::ADOConn(void)
 {
 	ZeroMemory(m_error,sizeof(m_error));
 }
 
-ADOConn::~ADOConn(void)
+ADOConn* ADOConn::GetInstance()
 {
+	if (m_pConn==NULL)
+	{
+		m_pConn=new ADOConn;
+		bool bOk=m_pConn->Connect(g_bstrConnect);
+		assert(bOk);
+	}
+	return m_pConn;
 }
 
 bool  ADOConn::Connect(_bstr_t bstrConnect)

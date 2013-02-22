@@ -1,13 +1,17 @@
 #pragma once
 #include "afx.h"
+#include "ADOConn.h"
 
 class DoctorInfo
 {
 public:
-	int pid;
-	char name[50];
+	int m_pid;
+	char m_strName[50];
+private:
+	ADOConn* m_pConn;
 
 public:
+	DoctorInfo();
 	void RefreshFromDatabase();
 	void RefreshToDatabase();
 	static DoctorInfo GetFromDatabase(int pid);
@@ -16,11 +20,14 @@ public:
 class PatientInfo
 {
 public:
-	DoctorInfo doctor;
-	int pid;
-	char name[50];
+	DoctorInfo m_doctor;
+	int m_pid;
+	char m_strName[50];
+private:
+	ADOConn* m_pConn;
 
 public:
+	PatientInfo();
 	void RefreshFromDatabase();
 	void RefreshToDatabase();
 	static PatientInfo GetFromDatabase(int pid);
