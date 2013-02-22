@@ -113,8 +113,8 @@ BOOL CPictureManageApp::InitInstance()
 	if (__argc<3)
 		return FALSE;
 
-	m_patient.pid=atoi(__argv[1]);
-	m_doctor.pid=atoi(__argv[2]);
+	//m_patient.pid=atoi(__argv[1]);
+	//m_doctor.pid=atoi(__argv[2]);
 
 	if (!ProcessShellCommand(cmdInfo))
 		return FALSE;

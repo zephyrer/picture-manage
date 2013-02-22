@@ -1,15 +1,27 @@
 #pragma once
 #include "afx.h"
 
-typedef struct DOCTORINFO
+class DoctorInfo
 {
+public:
 	int pid;
 	char name[50];
-} DoctorInfo, *PDoctorInfo;
 
-typedef struct PATIENTINFO
+public:
+	void RefreshFromDatabase();
+	void RefreshToDatabase();
+	static DoctorInfo GetFromDatabase(int pid);
+}
+
+class PatientInfo
 {
+public:
 	DoctorInfo doctor;
 	int pid;
 	char name[50];
-}PatientInfo, * PPatientInfo;
+
+public:
+	void RefreshFromDatabase();
+	void RefreshToDatabase();
+	static PatientInfo GetFromDatabase(int pid);
+}

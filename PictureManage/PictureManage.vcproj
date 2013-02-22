@@ -198,6 +198,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\PersonInfo.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\PictureManage.cpp"
 				>
 			</File>
