@@ -11,7 +11,7 @@ public:
 	void RefreshFromDatabase();
 	void RefreshToDatabase();
 	static DoctorInfo GetFromDatabase(int pid);
-}
+};
 
 class PatientInfo
 {
@@ -24,4 +24,4 @@ public:
 	void RefreshFromDatabase();
 	void RefreshToDatabase();
 	static PatientInfo GetFromDatabase(int pid);
-}
+};
