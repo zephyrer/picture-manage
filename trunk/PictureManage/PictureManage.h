@@ -30,8 +30,8 @@ public:
 	DECLARE_MESSAGE_MAP()
 
 public:
-	PatientInfo m_patient;
-	DoctorInfo m_doctor;
+	//PatientInfo m_patient;
+	//DoctorInfo m_doctor;
 
 };
 
