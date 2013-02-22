@@ -124,7 +124,6 @@ BOOL CPictureManageApp::InitInstance()
 	pMainFrame->ShowWindow(m_nCmdShow);
 	pMainFrame->UpdateWindow();
 
-
 	return TRUE;
 }
 
