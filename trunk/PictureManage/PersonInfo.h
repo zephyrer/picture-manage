@@ -2,6 +2,7 @@
 #include "afx.h"
 #include "ADOConn.h"
 
+
 class DoctorInfo
 {
 public:
@@ -23,6 +24,10 @@ public:
 	DoctorInfo m_doctor;
 	int m_pid;
 	char m_strName[50];
+
+	std::list<std::string> m_bigImageNameList;
+	std::list<std::string> m_smallImageNameList;
+
 private:
 	ADOConn* m_pConn;
 
