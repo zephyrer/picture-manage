@@ -8,7 +8,7 @@
 #endif
 
 #include "resource.h"       // 主符号
-
+#include "PersonInfo.h"
 
 // CPictureManageApp:
 // 有关此类的实现，请参阅 PictureManage.cpp
@@ -28,6 +28,11 @@ public:
 // 实现
 	afx_msg void OnAppAbout();
 	DECLARE_MESSAGE_MAP()
+
+public:
+	PatientInfo m_patient;
+	DoctorInfo m_doctor;
+
 };
 
 extern CPictureManageApp theApp;

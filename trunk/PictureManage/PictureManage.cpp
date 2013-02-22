@@ -106,6 +106,17 @@ BOOL CPictureManageApp::InitInstance()
 
 	// 调度在命令行中指定的命令。如果
 	// 用 /RegServer、/Register、/Unregserver 或 /Unregister 启动应用程序，则返回 FALSE。
+
+	//命令行启动程序的命令如下，第一个参数123表示病人id，第二个参数456表示主治医师id；
+	//PictureManage.exe 123 456
+
+	AfxMessageBox("ddd");
+	if (__argc<3)
+		return FALSE;
+
+	m_patient.pid=atoi(__argv[1]);
+	m_doctor.pid=atoi(__argv[2]);
+
 	if (!ProcessShellCommand(cmdInfo))
 		return FALSE;
 	// 主窗口已初始化，因此显示它并对其进行更新
