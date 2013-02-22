@@ -21,7 +21,7 @@ void DoctorInfo::RefreshToDatabase()
 	sprintf(temp, "update info set name='%s' where id=%d ", this->m_strName, this->m_pid);
 	bstrSelect=temp;
 	BOOL bok= pConn->ExecuteSQL(bstrSelect);
-	assert(bok);
+	assert(bok==TRUE);
 }
 
 DoctorInfo DoctorInfo::GetFromDatabase(int pid)
@@ -76,7 +76,7 @@ void PatientInfo::RefreshToDatabase()
 	sprintf(temp, "update info set name='%s' where id=%d ", this->m_strName, this->m_pid);
 	bstrSelect=temp;
 	BOOL bok= pConn->ExecuteSQL(bstrSelect);
-	assert(bok);
+	assert(bok==TRUE);
 }
 
 PatientInfo PatientInfo::GetFromDatabase(int pid)

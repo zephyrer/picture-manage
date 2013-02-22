@@ -14,7 +14,7 @@ ADOConn* ADOConn::GetInstance()
 	{
 		m_pConn=new ADOConn;
 		bool bOk=m_pConn->Connect(g_bstrConnect);
-		assert(bOk);
+		assert(bOk==true);
 	}
 	return m_pConn;
 }
