@@ -9,7 +9,7 @@ DoctorInfo::DoctorInfo()
 void DoctorInfo::RefreshFromDatabase()
 {
 	DoctorInfo info=DoctorInfo::GetFromDatabase(this->m_pid);
-	strcpy(info.m_strName, info.m_strName);
+	strcpy(this->m_strName, info.m_strName);
 }
 
 void DoctorInfo::RefreshToDatabase()
@@ -64,7 +64,7 @@ PatientInfo::PatientInfo()
 void PatientInfo::RefreshFromDatabase()
 {
 	PatientInfo info=PatientInfo::GetFromDatabase(this->m_pid);
-	strcpy(info.m_strName, info.m_strName);
+	strcpy(this->m_strName, info.m_strName);
 }
 
 void PatientInfo::RefreshToDatabase()
