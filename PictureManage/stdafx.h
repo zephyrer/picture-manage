@@ -58,10 +58,8 @@
 #endif
 
 
-
-#define DEPARTMENT
-
-#ifdef DEPARTMENT
+#include <vs_global_base.h>
+#ifdef GLOBAL_WORK_ENVIRONMENT_DEPARTMENT
 static _bstr_t g_bstrConnect = "Provider=SQLOLEDB; Server=005056C00001\\MSSQLSERVER2008;Database=userTest;uid=P@ssw0rd;pwd=P@ssw0rd;";
 #else
 static _bstr_t g_bstrConnect = "Provider=SQLOLEDB; Server=PC-201004231533;Database=temp;uid=password;pwd=P@ssw0rd;";
