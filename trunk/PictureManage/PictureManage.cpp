@@ -1,4 +1,4 @@
-
+//*
 // PictureManage.cpp : 定义应用程序的类行为。
 //
 
@@ -110,8 +110,7 @@ BOOL CPictureManageApp::InitInstance()
 	//命令行启动程序的命令如下，第一个参数123表示病人id，第二个参数456表示主治医师id；
 	//PictureManage.exe 123 456
 
-	if (__argc<3)
-		return FALSE;
+	ASSERT(__argc==3);
 
 	m_patient.m_pid=atoi(__argv[1]);
 	m_doctor.m_pid=atoi(__argv[2]);
